@@ -13,6 +13,8 @@
 		CC4EB33029220445003E7046 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC4EB32F29220445003E7046 /* Assets.xcassets */; };
 		CC4EB33329220445003E7046 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC4EB33129220445003E7046 /* LaunchScreen.storyboard */; };
 		CC4EB33D29221A1B003E7046 /* QrViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4EB33C29221A1B003E7046 /* QrViewController.swift */; };
+		CC4EB340292666FD003E7046 /* ReaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4EB33F292666FD003E7046 /* ReaderView.swift */; };
+		CC4EB34329266D97003E7046 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC4EB34229266D97003E7046 /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		CC4EB33229220445003E7046 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CC4EB33429220445003E7046 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CC4EB33C29221A1B003E7046 /* QrViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QrViewController.swift; sourceTree = "<group>"; };
+		CC4EB33F292666FD003E7046 /* ReaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaderView.swift; sourceTree = "<group>"; };
+		CC4EB34229266D97003E7046 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC4EB34329266D97003E7046 /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,7 @@
 			children = (
 				CC4EB32529220444003E7046 /* LOTTOBIG */,
 				CC4EB32429220444003E7046 /* Products */,
+				CC4EB34129266D97003E7046 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,8 +77,17 @@
 			isa = PBXGroup;
 			children = (
 				CC4EB33C29221A1B003E7046 /* QrViewController.swift */,
+				CC4EB33F292666FD003E7046 /* ReaderView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		CC4EB34129266D97003E7046 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CC4EB34229266D97003E7046 /* WebKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,6 +162,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC4EB32729220444003E7046 /* AppDelegate.swift in Sources */,
+				CC4EB340292666FD003E7046 /* ReaderView.swift in Sources */,
 				CC4EB33D29221A1B003E7046 /* QrViewController.swift in Sources */,
 				CC4EB32929220444003E7046 /* SceneDelegate.swift in Sources */,
 			);

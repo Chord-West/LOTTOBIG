@@ -8,12 +8,18 @@
 
 
 import UIKit
+import WebKit
 
 
 class QrViewController : UIViewController{
     
+    @IBOutlet weak var webView: WKWebView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        let url = URL(string : "https://www.naver.com")
+        let requestObj = URLRequest(url: url!)
+        webView.load(requestObj)
         
     }
 }

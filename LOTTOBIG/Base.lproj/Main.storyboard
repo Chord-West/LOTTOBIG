@@ -44,21 +44,40 @@
             </objects>
             <point key="canvasLocation" x="-1086" y="-160"/>
         </scene>
-        <!--View Controller-->
+        <!--Qr View Controller-->
         <scene sceneID="W5r-cj-1h3">
             <objects>
-                <viewController id="ke2-DJ-mq6" sceneMemberID="viewController">
+                <viewController id="ke2-DJ-mq6" customClass="QrViewController" customModule="LOTTOBIG" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="P1Y-r5-Bsf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Is-Hq-f0Z">
+                                <rect key="frame" x="10" y="98" width="394" height="705"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Q93-UY-vsr"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Q93-UY-vsr" firstAttribute="bottom" secondItem="9Is-Hq-f0Z" secondAttribute="bottom" constant="10" id="In2-3R-oH3"/>
+                            <constraint firstItem="Q93-UY-vsr" firstAttribute="trailing" secondItem="9Is-Hq-f0Z" secondAttribute="trailing" constant="10" id="SN7-Cw-KKZ"/>
+                            <constraint firstItem="9Is-Hq-f0Z" firstAttribute="leading" secondItem="Q93-UY-vsr" secondAttribute="leading" constant="10" id="rMg-kb-BFu"/>
+                            <constraint firstItem="9Is-Hq-f0Z" firstAttribute="top" secondItem="Q93-UY-vsr" secondAttribute="top" constant="10" id="sWu-Tr-WUO"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="SiV-X4-awO"/>
+                    <connections>
+                        <outlet property="webView" destination="9Is-Hq-f0Z" id="jE3-hs-AuB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OWY-qG-Yjk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-114" y="-208"/>
+            <point key="canvasLocation" x="29" y="-192"/>
         </scene>
         <!--Item-->
         <scene sceneID="smY-0M-eku">
