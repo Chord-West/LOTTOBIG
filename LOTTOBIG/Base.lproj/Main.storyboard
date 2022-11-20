@@ -53,25 +53,52 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Is-Hq-f0Z">
-                                <rect key="frame" x="10" y="98" width="394" height="705"/>
+                                <rect key="frame" x="10" y="588" width="394" height="175"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1x9-7X-6wk">
+                                <rect key="frame" x="107" y="633" width="200" height="80"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="DBC-XK-PQd"/>
+                                    <constraint firstAttribute="height" constant="80" id="orQ-UK-C0z"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="QR 버튼">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="30"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="scanButtonAction:" destination="ke2-DJ-mq6" eventType="touchUpInside" id="9DR-rU-hbt"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2G9-Pz-fqI" customClass="ReaderView" customModule="LOTTOBIG" customModuleProvider="target">
+                                <rect key="frame" x="10" y="107" width="394" height="247"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Q93-UY-vsr"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Q93-UY-vsr" firstAttribute="bottom" secondItem="9Is-Hq-f0Z" secondAttribute="bottom" constant="10" id="In2-3R-oH3"/>
+                            <constraint firstItem="2G9-Pz-fqI" firstAttribute="leading" secondItem="Q93-UY-vsr" secondAttribute="leading" constant="10" id="0jP-fi-QLr"/>
+                            <constraint firstItem="Q93-UY-vsr" firstAttribute="bottom" secondItem="9Is-Hq-f0Z" secondAttribute="bottom" constant="50" id="In2-3R-oH3"/>
+                            <constraint firstItem="9Is-Hq-f0Z" firstAttribute="top" secondItem="2G9-Pz-fqI" secondAttribute="bottom" constant="234" id="NKZ-Iw-K2O"/>
+                            <constraint firstItem="1x9-7X-6wk" firstAttribute="centerX" secondItem="9Is-Hq-f0Z" secondAttribute="centerX" id="Oc6-6i-e1M"/>
+                            <constraint firstItem="Q93-UY-vsr" firstAttribute="bottom" secondItem="1x9-7X-6wk" secondAttribute="bottom" constant="100" id="SDe-nZ-uzO"/>
                             <constraint firstItem="Q93-UY-vsr" firstAttribute="trailing" secondItem="9Is-Hq-f0Z" secondAttribute="trailing" constant="10" id="SN7-Cw-KKZ"/>
+                            <constraint firstItem="Q93-UY-vsr" firstAttribute="trailing" secondItem="2G9-Pz-fqI" secondAttribute="trailing" constant="10" id="Tig-7n-vsL"/>
+                            <constraint firstItem="2G9-Pz-fqI" firstAttribute="top" secondItem="Q93-UY-vsr" secondAttribute="top" constant="19" id="ZmN-P1-s57"/>
                             <constraint firstItem="9Is-Hq-f0Z" firstAttribute="leading" secondItem="Q93-UY-vsr" secondAttribute="leading" constant="10" id="rMg-kb-BFu"/>
-                            <constraint firstItem="9Is-Hq-f0Z" firstAttribute="top" secondItem="Q93-UY-vsr" secondAttribute="top" constant="10" id="sWu-Tr-WUO"/>
+                            <constraint firstItem="9Is-Hq-f0Z" firstAttribute="top" secondItem="Q93-UY-vsr" secondAttribute="top" constant="500" id="sWu-Tr-WUO"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="SiV-X4-awO"/>
                     <connections>
+                        <outlet property="qrcodeBtn" destination="1x9-7X-6wk" id="Slx-aH-Nwd"/>
+                        <outlet property="readerView" destination="2G9-Pz-fqI" id="omP-a3-U7M"/>
                         <outlet property="webView" destination="9Is-Hq-f0Z" id="jE3-hs-AuB"/>
                     </connections>
                 </viewController>
@@ -82,7 +109,6 @@
         <!--Item-->
         <scene sceneID="smY-0M-eku">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bpt-vi-Ssf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController id="ZXW-Ot-xIT" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="K4y-0w-t6c"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="4xE-0U-zaQ">
@@ -93,6 +119,7 @@
                         <segue destination="H20-7p-HwS" kind="relationship" relationship="rootViewController" id="L9e-VY-cQq"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bpt-vi-Ssf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1062" y="538"/>
         </scene>
