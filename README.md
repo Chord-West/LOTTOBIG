@@ -1,11 +1,8 @@
 # LOTTOBIG
----
 
 
 
 # 개발환경구성
-
----
 
 - Xcode ( 13.3 )
 - 언어 : Swift, stroyBoard
@@ -16,7 +13,6 @@
 
 # 기능 요구 사항
 
----
 
 - QrViewController
     - Webkit 사용하여 보여주기
