@@ -16,6 +16,7 @@
 		CC4EB33D29221A1B003E7046 /* QrViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4EB33C29221A1B003E7046 /* QrViewController.swift */; };
 		CC4EB34329266D97003E7046 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC4EB34229266D97003E7046 /* WebKit.framework */; };
 		CC7F5F8A292A5F1B0002C109 /* ReaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7F5F89292A5F1B0002C109 /* ReaderView.swift */; };
+		CC7F5F8E292BBE910002C109 /* RandomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7F5F8D292BBE910002C109 /* RandomViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		CC4EB33C29221A1B003E7046 /* QrViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QrViewController.swift; sourceTree = "<group>"; };
 		CC4EB34229266D97003E7046 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		CC7F5F89292A5F1B0002C109 /* ReaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaderView.swift; sourceTree = "<group>"; };
+		CC7F5F8D292BBE910002C109 /* RandomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomViewController.swift; sourceTree = "<group>"; };
 		EE0A731BF87A29A07764B1ED /* Pods-LOTTOBIG.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LOTTOBIG.debug.xcconfig"; path = "Target Support Files/Pods-LOTTOBIG/Pods-LOTTOBIG.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -77,6 +79,7 @@
 		CC4EB32529220444003E7046 /* LOTTOBIG */ = {
 			isa = PBXGroup;
 			children = (
+				CC7F5F8C292BBE510002C109 /* Controller */,
 				CC4EB33E29221A83003E7046 /* View */,
 				CC4EB32629220444003E7046 /* AppDelegate.swift */,
 				CC4EB32829220444003E7046 /* SceneDelegate.swift */,
@@ -91,7 +94,6 @@
 		CC4EB33E29221A83003E7046 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				CC4EB33C29221A1B003E7046 /* QrViewController.swift */,
 				CC7F5F89292A5F1B0002C109 /* ReaderView.swift */,
 			);
 			path = View;
@@ -104,6 +106,15 @@
 				075A7D7F2F6C8518C34FC3F0 /* Pods_LOTTOBIG.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CC7F5F8C292BBE510002C109 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CC4EB33C29221A1B003E7046 /* QrViewController.swift */,
+				CC7F5F8D292BBE910002C109 /* RandomViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,6 +232,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC7F5F8E292BBE910002C109 /* RandomViewController.swift in Sources */,
 				CC4EB32729220444003E7046 /* AppDelegate.swift in Sources */,
 				CC7F5F8A292A5F1B0002C109 /* ReaderView.swift in Sources */,
 				CC4EB33D29221A1B003E7046 /* QrViewController.swift in Sources */,
