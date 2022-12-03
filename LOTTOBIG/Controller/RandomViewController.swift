@@ -10,6 +10,9 @@ import UIKit
 
 class RandomViewController : UIViewController {
     
+    
+    
+    @IBOutlet weak var lottoCollectionView: UICollectionView!
     @IBOutlet weak var firstBallLabel: UILabel!
     @IBOutlet weak var secondBallLabel: UILabel!
     @IBOutlet weak var thirdBallLabel: UILabel!
@@ -20,6 +23,10 @@ class RandomViewController : UIViewController {
     var numbers:[Int] = []
     var BallLabels:[UILabel] = []
     
+    var numberOfCell = 5
+    var cellIdentifier = "lottoCollectioViewCell"
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -29,12 +36,12 @@ class RandomViewController : UIViewController {
         BallLabels.forEach{
             $0.layer.masksToBounds = true
             $0.layer.cornerRadius = $0.frame.size.height/2.0
-            
         }
-
-
     }
     
+    private func setupDelegate(){
+        lottoCollectionView.dataSource = self
+    }
     
     func getRandomNumber() -> Int{
         let random_num: Int = Int(arc4random_uniform(45)) + 1
@@ -55,8 +62,8 @@ class RandomViewController : UIViewController {
     
     func connectLabelColor(num: Int) -> UIColor {
         
+        //  공별로 색깔 연결
         switch num {
-            
         case 1...10:
             return UIColor(red: 255/255, green: 200/255, blue: 0/255, alpha: 1.0)
         case 11...20:
@@ -73,7 +80,7 @@ class RandomViewController : UIViewController {
     
     }
     
-    
+    //MARK: - 버튼 액션 메소드
     @IBAction func randomButtonTapped(_ sender: UIButton) {
         print("hi")
         numbers = []
@@ -91,6 +98,20 @@ class RandomViewController : UIViewController {
         
         
     }
+    
+    
+}
+
+
+extension RandomViewController: UICollectionViewDataSource{
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return numberOfCell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = co
+    }
+    
     
     
 }
