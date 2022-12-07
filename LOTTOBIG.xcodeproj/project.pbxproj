@@ -15,6 +15,7 @@
 		CC4EB33329220445003E7046 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC4EB33129220445003E7046 /* LaunchScreen.storyboard */; };
 		CC4EB33D29221A1B003E7046 /* QrViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4EB33C29221A1B003E7046 /* QrViewController.swift */; };
 		CC4EB34329266D97003E7046 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC4EB34229266D97003E7046 /* WebKit.framework */; };
+		CC6513EB2940D9AB000139B3 /* RandomBallCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6513EA2940D9AB000139B3 /* RandomBallCell.swift */; };
 		CC7F5F8A292A5F1B0002C109 /* ReaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7F5F89292A5F1B0002C109 /* ReaderView.swift */; };
 		CC7F5F8E292BBE910002C109 /* RandomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7F5F8D292BBE910002C109 /* RandomViewController.swift */; };
 /* End PBXBuildFile section */
@@ -31,6 +32,7 @@
 		CC4EB33429220445003E7046 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CC4EB33C29221A1B003E7046 /* QrViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QrViewController.swift; sourceTree = "<group>"; };
 		CC4EB34229266D97003E7046 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		CC6513EA2940D9AB000139B3 /* RandomBallCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomBallCell.swift; sourceTree = "<group>"; };
 		CC7F5F89292A5F1B0002C109 /* ReaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaderView.swift; sourceTree = "<group>"; };
 		CC7F5F8D292BBE910002C109 /* RandomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomViewController.swift; sourceTree = "<group>"; };
 		EE0A731BF87A29A07764B1ED /* Pods-LOTTOBIG.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LOTTOBIG.debug.xcconfig"; path = "Target Support Files/Pods-LOTTOBIG/Pods-LOTTOBIG.debug.xcconfig"; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				CC7F5F89292A5F1B0002C109 /* ReaderView.swift */,
+				CC6513EA2940D9AB000139B3 /* RandomBallCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -237,6 +240,7 @@
 				CC7F5F8A292A5F1B0002C109 /* ReaderView.swift in Sources */,
 				CC4EB33D29221A1B003E7046 /* QrViewController.swift in Sources */,
 				CC4EB32929220444003E7046 /* SceneDelegate.swift in Sources */,
+				CC6513EB2940D9AB000139B3 /* RandomBallCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

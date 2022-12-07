@@ -11,8 +11,8 @@ import UIKit
 class RandomViewController : UIViewController {
     
     
+    @IBOutlet weak var tableView: UITableView!
     
-    @IBOutlet weak var lottoCollectionView: UICollectionView!
     @IBOutlet weak var firstBallLabel: UILabel!
     @IBOutlet weak var secondBallLabel: UILabel!
     @IBOutlet weak var thirdBallLabel: UILabel!
@@ -20,16 +20,16 @@ class RandomViewController : UIViewController {
     @IBOutlet weak var fifthBallLabel: UILabel!
     @IBOutlet weak var sixthBallLabel: UILabel!
     
-    var numbers:[Int] = []
     var BallLabels:[UILabel] = []
-    
+    var tableViewItems = ["item1","item2","item3"]
+    var numberData:[[Int]] = []
+    var numbers:[Int] = []
     var numberOfCell = 5
-    var cellIdentifier = "lottoCollectioViewCell"
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.configureTableView() // tableView 초기 설정
+
         // 6개의 공이 동일한 UI
         BallLabels  = [firstBallLabel, secondBallLabel, thirdBallLabel,
          fourthBallLabel, fifthBallLabel, sixthBallLabel]
@@ -39,10 +39,10 @@ class RandomViewController : UIViewController {
         }
     }
     
-    private func setupDelegate(){
-        lottoCollectionView.dataSource = self
+    private func configureTableView(){
+        self.tableView.dataSource = self
     }
-    
+
     func getRandomNumber() -> Int{
         let random_num: Int = Int(arc4random_uniform(45)) + 1
         return random_num
@@ -86,14 +86,15 @@ class RandomViewController : UIViewController {
         numbers = []
         generateNumbers()
         numbers.sort()
-
+        numberData.append(numbers)
+        print(numberData)
+        
         for i in 0...5 {
             BallLabels[i].text = String(numbers[i])
             BallLabels[i].textColor = .white
             BallLabels[i].font = UIFont.systemFont(ofSize: 20, weight: .bold)
             BallLabels[i].layer.backgroundColor = connectLabelColor(num:numbers[i]).cgColor
-            
-            
+ 
         }
         
         
@@ -103,15 +104,20 @@ class RandomViewController : UIViewController {
 }
 
 
-extension RandomViewController: UICollectionViewDataSource{
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return numberOfCell
+extension RandomViewController : UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return tableViewItems.count
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = co
-    }
     
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "RandomBallCell", for: indexPath)
+        
+        return cell
+        
+    }
     
     
 }
+
