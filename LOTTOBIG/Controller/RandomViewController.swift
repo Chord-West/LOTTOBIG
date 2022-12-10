@@ -21,7 +21,7 @@ class RandomViewController : UIViewController {
     @IBOutlet weak var sixthBallLabel: UILabel!
     
     var BallLabels:[UILabel] = []
-    var tableViewItems = ["item1","item2","item3"]
+    
     var numberData:[[Int]] = []
     var numbers:[Int] = []
     var numberOfCell = 5
@@ -40,7 +40,9 @@ class RandomViewController : UIViewController {
     }
     
     private func configureTableView(){
+    
         self.tableView.dataSource = self
+        
     }
 
     func getRandomNumber() -> Int{
@@ -86,6 +88,7 @@ class RandomViewController : UIViewController {
         numbers = []
         generateNumbers()
         numbers.sort()
+        // 공 저장
         numberData.append(numbers)
         print(numberData)
         
@@ -96,6 +99,8 @@ class RandomViewController : UIViewController {
             BallLabels[i].layer.backgroundColor = connectLabelColor(num:numbers[i]).cgColor
  
         }
+
+        tableView.reloadData()
         
         
     }
@@ -107,12 +112,23 @@ class RandomViewController : UIViewController {
 extension RandomViewController : UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return tableViewItems.count
+        return numberData.count
     }
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "RandomBallCell", for: indexPath)
+        guard let cell =  tableView.dequeueReusableCell(withIdentifier: "ballCell", for: indexPath) as? RandomBallCell else { return UITableViewCell()}
+        
+    
+
+        print("numberData \(numberData[indexPath.row][0])")
+        
+        numberData[indexPath.row].forEach{
+            print($0)
+        }
+        
+        cell.firstBall.text = String(numberData[indexPath.row][0])
+        cell.firstBall.backgroundColor = connectLabelColor(num:numberData[indexPath.row][0])
         
         return cell
         

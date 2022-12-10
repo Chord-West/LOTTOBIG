@@ -9,6 +9,7 @@ import UIKit
 
 class RandomBallCell : UITableViewCell {
     
+    
     @IBOutlet weak var firstBall: UILabel!
     @IBOutlet weak var secondBall: UILabel!
     @IBOutlet weak var thirdBall: UILabel!
@@ -17,6 +18,7 @@ class RandomBallCell : UITableViewCell {
     @IBOutlet weak var sixthBall: UILabel!
     var BallLabels:[UILabel] = []
     
+    /*
     override func awakeFromNib() {
         super.awakeFromNib()
         BallLabels  = [firstBall, secondBall, thirdBall,
@@ -27,6 +29,15 @@ class RandomBallCell : UITableViewCell {
             $0.layer.borderWidth = 1
         }
     }
+    */
+    
+    required init?(coder: NSCoder){
+        super.init(coder: coder)
+        self.contentView.layer.cornerRadius = 3.0
+        self.contentView.layer.borderWidth = 1.0
+        self.contentView.layer.borderColor = UIColor.black.cgColor
+    }
+    
 
     
     
