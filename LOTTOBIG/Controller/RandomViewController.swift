@@ -61,10 +61,10 @@ class RandomViewController : UIViewController {
         numberData.append(numbers)         // 공 저장
         print(numberData)
         self.tableView.beginUpdates()
-        self.tableView.insertRows(at: [IndexPath(row: 0, section: 0)], with: .automatic)
+        self.tableView.insertRows(at: [IndexPath(row: numberData.count-1, section: 0)], with: .automatic)
         self.tableView.endUpdates()
         
-        //self.tableView.reloadData()
+        self.tableView.reloadData()
         
         
     }
