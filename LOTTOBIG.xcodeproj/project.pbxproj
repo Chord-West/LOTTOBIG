@@ -19,6 +19,7 @@
 		CC7F5F8A292A5F1B0002C109 /* ReaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7F5F89292A5F1B0002C109 /* ReaderView.swift */; };
 		CC7F5F8E292BBE910002C109 /* RandomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7F5F8D292BBE910002C109 /* RandomViewController.swift */; };
 		CCB6442F29475A800068093B /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB6442E29475A800068093B /* InfoViewController.swift */; };
+		CCB6443229630C5D0068093B /* LottoBall.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB6443129630C5D0068093B /* LottoBall.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		CC7F5F89292A5F1B0002C109 /* ReaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaderView.swift; sourceTree = "<group>"; };
 		CC7F5F8D292BBE910002C109 /* RandomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomViewController.swift; sourceTree = "<group>"; };
 		CCB6442E29475A800068093B /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		CCB6443129630C5D0068093B /* LottoBall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoBall.swift; sourceTree = "<group>"; };
 		EE0A731BF87A29A07764B1ED /* Pods-LOTTOBIG.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LOTTOBIG.debug.xcconfig"; path = "Target Support Files/Pods-LOTTOBIG/Pods-LOTTOBIG.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -83,6 +85,7 @@
 		CC4EB32529220444003E7046 /* LOTTOBIG */ = {
 			isa = PBXGroup;
 			children = (
+				CCB6443029630C0D0068093B /* Model */,
 				CC7F5F8C292BBE510002C109 /* Controller */,
 				CC4EB33E29221A83003E7046 /* View */,
 				CC4EB32629220444003E7046 /* AppDelegate.swift */,
@@ -121,6 +124,14 @@
 				CCB6442E29475A800068093B /* InfoViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		CCB6443029630C0D0068093B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CCB6443129630C5D0068093B /* LottoBall.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,6 +256,7 @@
 				CC4EB33D29221A1B003E7046 /* QrViewController.swift in Sources */,
 				CC4EB32929220444003E7046 /* SceneDelegate.swift in Sources */,
 				CC6513EB2940D9AB000139B3 /* RandomBallCell.swift in Sources */,
+				CCB6443229630C5D0068093B /* LottoBall.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
