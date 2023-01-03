@@ -20,7 +20,7 @@ struct LottoBall : Codable{
     var firstAccumamnt : Int?
     var firstPrzwnerCo : Int?
     var firstWinamnt  : Int?
-    var returnValue : Int?
+    var returnValue : String?
     var totSellamnt : Int?
     
     

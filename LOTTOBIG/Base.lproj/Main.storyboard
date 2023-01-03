@@ -326,62 +326,182 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="회차별 당첨 번호" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vdi-yK-j8P">
-                                <rect key="frame" x="148" y="118" width="111" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="회차별 당첨 번호" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vdi-yK-j8P">
+                                <rect key="frame" x="50" y="118" width="314" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="회차별 당첨 번호" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ZP-0w-sQB">
-                                <rect key="frame" x="123" y="226" width="111" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pq2-FW-uSH">
-                                <rect key="frame" x="240" y="147" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="회차별 당첨 번호" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5OC-IU-FY4">
-                                <rect key="frame" x="123" y="345" width="111" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="회차별 당첨 번호" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4XQ-rx-rrS">
-                                <rect key="frame" x="123" y="415" width="111" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nto-Mm-upC">
-                                <rect key="frame" x="321" y="147" width="49" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="조회"/>
-                                <connections>
-                                    <action selector="lookUpButtonTapped:" destination="9Ns-5q-U3b" eventType="touchUpInside" id="mtM-xn-qUk"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="39" translatesAutoresizingMaskIntoConstraints="NO" id="Scb-D4-g9H">
+                                <rect key="frame" x="20" y="178" width="374" height="31"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pq2-FW-uSH">
+                                        <rect key="frame" x="0.0" y="0.0" width="42" height="31"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nto-Mm-upC">
+                                        <rect key="frame" x="81" y="0.0" width="293" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="조회"/>
+                                        <connections>
+                                            <action selector="lookUpButtonTapped:" destination="9Ns-5q-U3b" eventType="touchUpInside" id="mtM-xn-qUk"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="Qze-P4-QI5">
+                                <rect key="frame" x="10" y="234" width="394" height="200.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="uHz-v4-o28">
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="19"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1000" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lx4-V1-0pN">
+                                                <rect key="frame" x="0.0" y="0.0" width="187.5" height="19"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="Lx4-V1-0pN" secondAttribute="height" multiplier="10:1" id="mUq-3m-ZRD"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="회 당첨 결과" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ZP-0w-sQB">
+                                                <rect key="frame" x="206.5" y="0.0" width="187.5" height="19"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="1ZP-0w-sQB" secondAttribute="height" multiplier="10:1" id="FuU-Yy-HNv"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="당첨 번호" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5OC-IU-FY4">
+                                        <rect key="frame" x="165.5" y="52" width="63" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="s6r-QU-V9N">
+                                        <rect key="frame" x="13.5" y="105.5" width="367" height="41.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4gs-iJ-UvD">
+                                                <rect key="frame" x="0.0" y="0.0" width="41.5" height="41.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="4gs-iJ-UvD" secondAttribute="height" multiplier="1:1" id="SaJ-Lr-aLM"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2kx-db-WGl">
+                                                <rect key="frame" x="46.5" y="0.0" width="41.5" height="41.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="2kx-db-WGl" secondAttribute="height" multiplier="1:1" id="UaY-bF-F0Q"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gTg-P8-2eM">
+                                                <rect key="frame" x="93" y="0.0" width="41.5" height="41.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="gTg-P8-2eM" secondAttribute="height" multiplier="1:1" id="kU7-LE-BDk"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aMh-P0-zbW">
+                                                <rect key="frame" x="139.5" y="0.0" width="41.5" height="41.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="aMh-P0-zbW" secondAttribute="height" multiplier="1:1" id="DbN-wt-0C2"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="loq-fH-0CQ">
+                                                <rect key="frame" x="186" y="0.0" width="41.5" height="41.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="loq-fH-0CQ" secondAttribute="height" multiplier="1:1" id="tlb-39-0zC"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9hq-ev-zus">
+                                                <rect key="frame" x="232.5" y="0.0" width="41.5" height="41.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="9hq-ev-zus" secondAttribute="height" multiplier="1:1" id="Etb-Sx-acF"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RRR-Xp-cMW">
+                                                <rect key="frame" x="279" y="0.0" width="41.5" height="41.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="RRR-Xp-cMW" secondAttribute="height" multiplier="1:1" id="ceS-V3-CUR"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mlM-Oe-GIm">
+                                                <rect key="frame" x="325.5" y="0.0" width="41.5" height="41.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="mlM-Oe-GIm" secondAttribute="height" multiplier="1:1" id="GC1-2G-XVn"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="gTg-P8-2eM" firstAttribute="width" secondItem="gTg-P8-2eM" secondAttribute="height" multiplier="1:1" id="6FY-aT-Cqs"/>
+                                            <constraint firstItem="loq-fH-0CQ" firstAttribute="width" secondItem="loq-fH-0CQ" secondAttribute="height" multiplier="1:1" id="Gmq-dZ-wx6"/>
+                                        </constraints>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="회차별 당첨 번호" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4XQ-rx-rrS">
+                                        <rect key="frame" x="141.5" y="180" width="111" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="i1s-gg-4YE"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vdi-yK-j8P" firstAttribute="top" secondItem="i1s-gg-4YE" secondAttribute="top" constant="30" id="74B-k5-YbZ"/>
+                            <constraint firstItem="vdi-yK-j8P" firstAttribute="leading" secondItem="i1s-gg-4YE" secondAttribute="leading" constant="50" id="A6P-xn-w3J"/>
+                            <constraint firstItem="Scb-D4-g9H" firstAttribute="top" secondItem="vdi-yK-j8P" secondAttribute="bottom" constant="30" id="BH1-kC-vef"/>
+                            <constraint firstItem="i1s-gg-4YE" firstAttribute="trailing" secondItem="vdi-yK-j8P" secondAttribute="trailing" constant="50" id="I0U-2k-Un0"/>
+                            <constraint firstItem="Scb-D4-g9H" firstAttribute="leading" secondItem="i1s-gg-4YE" secondAttribute="leading" constant="20" id="KV9-Vc-JuI"/>
+                            <constraint firstItem="Qze-P4-QI5" firstAttribute="leading" secondItem="nqr-Ma-5TX" secondAttribute="leading" constant="10" id="WJB-x4-Jbu"/>
+                            <constraint firstItem="i1s-gg-4YE" firstAttribute="trailing" secondItem="Scb-D4-g9H" secondAttribute="trailing" constant="20" id="YMV-fV-Y3I"/>
+                            <constraint firstItem="i1s-gg-4YE" firstAttribute="trailing" secondItem="Qze-P4-QI5" secondAttribute="trailing" constant="10" id="cw9-X7-CXv"/>
+                            <constraint firstItem="Qze-P4-QI5" firstAttribute="top" secondItem="Scb-D4-g9H" secondAttribute="bottom" constant="25" id="j0S-Du-I3Y"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="MzE-i5-KOX"/>
                     <connections>
+                        <outlet property="bnusNo" destination="mlM-Oe-GIm" id="9tf-VB-GOe"/>
+                        <outlet property="drwtNo1" destination="4gs-iJ-UvD" id="kQ7-KO-AMm"/>
+                        <outlet property="drwtNo2" destination="2kx-db-WGl" id="wKj-NI-iTp"/>
+                        <outlet property="drwtNo3" destination="gTg-P8-2eM" id="R7E-fy-Uhr"/>
+                        <outlet property="drwtNo4" destination="aMh-P0-zbW" id="OgG-QM-RY5"/>
+                        <outlet property="drwtNo5" destination="loq-fH-0CQ" id="ydH-QQ-SLO"/>
+                        <outlet property="drwtNo6" destination="9hq-ev-zus" id="d8b-LG-0c9"/>
                         <outlet property="lookUpBtn" destination="Nto-Mm-upC" id="BVW-8K-A3v"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tyF-wd-fvM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="71" y="1299"/>
+            <point key="canvasLocation" x="69.565217391304358" y="1298.4375"/>
         </scene>
     </scenes>
     <resources>
